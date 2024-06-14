@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiPay Integration Test</title>
+</head>
+<body>
+    <form action="https://tt.wipayfinancial.com/plugins/payments/request" method="POST">
+        <input type="hidden" name="account_number" value="9604306638">
+        <input type="hidden" name="avs" value="0">
+        <input type="hidden" name="country_code" value="TT">
+        <input type="hidden" name="currency" value="TTD">
+        <input type="hidden" name="data" value='{"project_invoice_id": "12345"}'>
+        <input type="hidden" name="environment" value="sandbox">
+        <input type="hidden" name="fee_structure" value="customer_pay">
+        <input type="hidden" name="method" value="credit_card">
+        <input type="hidden" name="order_id" value="oid_123-aBc">
+        <input type="hidden" name="origin" value="WiPay-example_app">
+        <input type="hidden" name="response_url" value="https://project.co/webhook/payment">
+        <input type="hidden" name="total" value="10.00">
+        <input type="submit" value="Checkout">
+    </form>
+</body>
+</html>
